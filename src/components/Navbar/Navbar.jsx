@@ -12,14 +12,7 @@ import Buttonfn from "../Button/Button"
 function Navbar(){
     return (
 <>
-{/* <AppBar className="navbar" position="static">
-        
-        
-        
 
-
-        <Search />
-      </AppBar> */}
 
 <nav className="navbar" >
 <Logo />
