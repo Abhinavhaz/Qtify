@@ -15,7 +15,7 @@ function Search(){
     return (
         <div>
 
-<form className="wrapper">
+<form className="Swrapper">
 
 <div>
 <input    className="search"  placeholder="Search a song of your Choice" />
