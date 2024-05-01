@@ -1,88 +1,9 @@
-// import { Tooltip,Chip } from "@mui/material";
-// import React from "react";
-// import styles from "./Card.css"
 
-// function Card({data}){
-// const type = data.type
-
-// const getCard = (type)=>{
- 
-//     switch(type){
-
-//         case  "album":{
-
-//            const {image,follows,title,songs}  = data
-//            return(
-//             <>
-//             <Tooltip title={`${songs.length}songs`} placement="top" arrow>
-// <div className="wrapper">
-// <div className="card">
-// <img src={image}     alt="img"     />
-// <div className="banner">
-// <Chip
-//   label={`${follows} follows`}
-//   size="small"
-// />
-
-// </div>
-// <div className="titleWrapper">
-//     <p>
-//         {title}
-//     </p>
-// </div>
-// </div>
-// </div>
-//    </Tooltip>
-//    </>
-//            )
-//         }
-
-
-// case "songs":{
-//     const {image,likes,title} = data.data
-
-
-//     return(
-//         <div className="wrapper">
-// <div className="card">
-// <img src={image} alt="immg" />
-
-
-// <div className="banner">
-//     <chip
-
-//     size="small"
-//     className="chip"
-//     label = {`${likes}likes`}
-    
-    
-//    />
-       
-    
-// </div>
-// <div className="titleWrapper">
-//     <p className="para">{title}</p>
-// </div>
-// </div>
-//         </div>
-//     )
-// }
-// default:return <></>
-
-
-//     }
-
-// }
-
-
-// return getCard(type)
-
-// }
-// export default Card
 import React, { useEffect, useState } from "react";
 import CardMusic from "../CardMusic/CardMusic";
 import axios from "axios";
 import Grid from "@mui/material/Grid";
+import styles from "./Card.css"
 import { Typography, Button } from "@mui/material";
 
 const Card = () => {
