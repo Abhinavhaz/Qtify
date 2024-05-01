@@ -1,15 +1,14 @@
 
 import React, { useEffect } from "react";
 import { Card, CardContent, CardMedia, Typography, Chip } from "@mui/material";
-
+import styles from "./CardMusic.css"
 const CardMusic = ({ card }) => {
   return (
     <div>
       <Card>
-        <CardMedia
+        <CardMedia className="cardmedia"
           component="img"
-          alt="Spotify Image"
-          height="140"
+          alt="image"
           image={card.image}
         />
         <CardContent>

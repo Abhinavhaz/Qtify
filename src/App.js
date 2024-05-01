@@ -6,7 +6,10 @@ import './App.css';
 // import { fetchTopAlbums,fetchnewAlbums } from "./components/Api/APi"
 import axios from  "axios"
 import Card from './components/Card/Card';
+import Song from './components/Songs/Songs';
 import { useEffect,useState } from 'react';
+import Faqs from './components/Faq/Faq';
+import { green } from '@mui/material/colors';
 // import Section from './components/Section/Section';
 // import Card from './components/Card/Card';
 function App() {
@@ -62,8 +65,22 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-<Card />
+     <Card />
 
+     
+     <hr style={{ marginTop: '50px',border: '2px solid green' }} />
+   
+
+      <Song />
+      <hr style={{ marginTop: '50px',border: '2px solid green' }} />
+
+
+   <h1 className='heading'>FAQs </h1>
+
+   <div className='faqs'>
+   <Faqs />
+
+</div>
     </div>
   );
 }

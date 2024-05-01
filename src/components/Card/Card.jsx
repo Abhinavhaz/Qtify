@@ -5,6 +5,7 @@ import axios from "axios";
 import Grid from "@mui/material/Grid";
 import styles from "./Card.css"
 import { Typography, Button } from "@mui/material";
+import Carousel from "../Carousel/Carousel";
 
 const Card = () => {
   const [topAlbumCard, setTopAlbumCard] = useState([]);
@@ -53,7 +54,9 @@ const Card = () => {
           {isTopAlbumCollapsed ? "Show All" : "Collapse"}
         </Button>
       </div>
-      <Grid container spacing={2} className="albums">
+
+      {setIsTopAlbumCollapsed ?(<> 
+        <Grid container spacing={2} className="albums">
         {topAlbumCard.map((cardItem, index) => (
           <Grid
             item
@@ -70,6 +73,35 @@ const Card = () => {
           </Grid>
         ))}
       </Grid>
+        
+        </>):(<>
+          <Carousel
+                data={topAlbumCard}  />
+        
+        </>)}
+      {/* <Grid container spacing={2} className="albums">
+        {topAlbumCard.map((cardItem, index) => (
+          <Grid
+            item
+            key={cardItem.id}
+            xs={6}
+            sm={4}
+            md={3}
+            lg={2}
+            style={{
+              display: isTopAlbumCollapsed && index > 5 ? "none" : "block",
+            }}
+          >
+            <CardMusic card={cardItem} className="cards" />
+          </Grid>
+        ))}
+      </Grid> */}
+
+
+<hr style={{ marginTop: '50px',border: '1.5px solid green' }} />
+
+
+      
       <div className="albums album-bar">
         <Typography>New Albums</Typography>
         <Button onClick={handleNewAlbumCollapse}>
