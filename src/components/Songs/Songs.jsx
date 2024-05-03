@@ -58,7 +58,7 @@ const Song = () => {
       <Grid container spacing={2} className="albums">
         {filterSong.map((cardItem, index) => (
           <Grid item key={cardItem.id} xs={6} sm={4} md={3} lg={2}>
-            <CardMusic card={cardItem} className="cards" />
+            <CardMusic card={cardItem} songs={song} className="cards" />
           </Grid>
         ))}
       </Grid>

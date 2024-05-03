@@ -69,7 +69,7 @@ const Card = () => {
               display: isTopAlbumCollapsed && index > 5 ? "none" : "block",
             }}
           >
-            <CardMusic card={cardItem} className="cards" />
+            <CardMusic card={cardItem} songs={cardItem.songs} className="cards" />
           </Grid>
         ))}
       </Grid>
@@ -121,7 +121,7 @@ const Card = () => {
               display: isNewAlbumCollapsed && index > 5 ? "none" : "block",
             }}
           >
-            <CardMusic card={cardItem} className="cards" />
+            <CardMusic card={cardItem} songs={cardItem.songs} className="cards" />
           </Grid>
         ))}
       </Grid>
